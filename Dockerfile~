@@ -31,7 +31,6 @@ ENV PATH $JAVA_HOME/bin:$PATH
 RUN update-alternatives --install /usr/bin/java java $JAVA_HOME/bin/java 20000 && update-alternatives --install /usr/bin/javac javac $JAVA_HOME/bin/javac 20000
 
 # install maven
-chmod 755 /usr/bin/dpkg
 RUN apt-get install -y maven
 ENV MAVEN_HOME /usr/share/maven
 
