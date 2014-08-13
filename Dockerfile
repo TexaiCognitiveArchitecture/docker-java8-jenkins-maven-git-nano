@@ -12,12 +12,12 @@ MAINTAINER Stephen L. Reed (http://texai.org, stephenreed@yahoo.com)
 # update dpkg repositories
 RUN apt-get update 
 
-# install wget
-RUN apt-get install -y wget
-
 # install maven
 RUN apt-get install -y maven
 ENV MAVEN_HOME /usr/share/maven
+
+# install wget
+RUN apt-get install -y wget
 
 # install git
 RUN apt-get install -y git
