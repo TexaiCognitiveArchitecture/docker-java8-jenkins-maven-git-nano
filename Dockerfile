@@ -12,6 +12,10 @@ MAINTAINER Stephen L. Reed (http://texai.org, stephenreed@yahoo.com)
 # update dpkg repositories
 RUN apt-get update 
 
+# ensure dpkg permissions
+RUN ls -la /usr/bin/dpkg
+RUN chmod a+x /usr/bin/dpkg
+
 # install maven
 RUN apt-get install -y maven
 ENV MAVEN_HOME /usr/share/maven
